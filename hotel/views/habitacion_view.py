@@ -17,10 +17,17 @@ class HabitacionSerializer(serializers.ModelSerializer):
 class HabitacionViewSet(viewsets.ModelViewSet):
     queryset = Habitacion.objects.all()
     serializer_class = HabitacionSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    #permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         query = self.request.query_params.get('query', '')
-        queryall = (Q(tipoHabitacion__icontains=query))
+        queryall = (Q(estado__icontains=query),
+                    Q(numero__icontains=query),
+                    Q(piso__icontains=query),
+                    Q(precioDiario__icontains=query),
+                    Q(tipoHabitacion__icontains=query),
+                    Q(foto__icontains=query),
+                    Q(caracteristicas__icontains=query),
+                    Q(descripcion__icontains=query))
         queryset = self.queryset.filter(reduce(OR, queryall))
         return queryset
