@@ -2,7 +2,7 @@ from django.db import models
 from .venta import Venta
 
 
-class DetalleVenta(models.Model):
+class Detalle_Venta(models.Model):
 
     producto = models.CharField(max_length=15)
     cantidad = models.IntegerField(default=0)

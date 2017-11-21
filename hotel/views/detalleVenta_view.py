@@ -1,4 +1,4 @@
-from ..models.detalleVenta import DetalleVenta
+from ..models.detalleVenta import Detalle_Venta
 from rest_framework import serializers, viewsets
 #from rest_framework import permissions
 #from django.db.models import Q
@@ -6,12 +6,12 @@ from rest_framework import serializers, viewsets
 #from functools import reduce#
 
 
-class DetalleVentaSerializer(serializers.ModelSerializer):
+class Detalle_VentaSerializer(serializers.ModelSerializer):
     venta_numDoc = serializers.SerializerMethodField()
     venta_direccion = serializers.SerializerMethodField()
 
     class Meta:
-        model = DetalleVenta
+        model = Detalle_Venta
         fields = '__all__'
         # fields = ('id', 'username', 'email', 'is_staff')
 
@@ -22,7 +22,7 @@ class DetalleVentaSerializer(serializers.ModelSerializer):
         return "%s " % (obj.Venta.direccion)
 
 
-class DetalleVentaViewSet(viewsets.ModelViewSet):
-    queryset = DetalleVenta.objects.all()
-    serializer_class = DetalleVentaSerializer
+class Detalle_VentaViewSet(viewsets.ModelViewSet):
+    queryset = Detalle_Venta.objects.all()
+    serializer_class = Detalle_VentaSerializer
     #permission_classes = [permissions.IsAuthenticated]

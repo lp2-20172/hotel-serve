@@ -6,7 +6,7 @@ from hotel.models.cliente import Cliente
 from hotel.models.venta import Venta
 from hotel.models.docType import Doc_Type
 from hotel.models.area import Area
-from hotel.models.detalleVenta import DetalleVenta
+from hotel.models.detalleVenta import Detalle_Venta
 from hotel.models.trabajador import Trabajador
 
 
@@ -18,5 +18,5 @@ admin.site.register(Cliente)
 admin.site.register(Venta)
 admin.site.register(Doc_Type)
 admin.site.register(Area)
-admin.site.register(DetalleVenta)
+admin.site.register(Detalle_Venta)
 admin.site.register(Trabajador)

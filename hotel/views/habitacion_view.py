@@ -24,8 +24,8 @@ class HabitacionViewSet(viewsets.ModelViewSet):
         queryall = (Q(estado__icontains=query),
                     Q(numero__icontains=query),
                     Q(piso__icontains=query),
-                    Q(precioDiario__icontains=query),
-                    Q(tipoHabitacion__icontains=query),
+                    Q(precio_diario__icontains=query),
+                    Q(tipo_habitacion__icontains=query),
                     Q(foto__icontains=query),
                     Q(caracteristicas__icontains=query),
                     Q(descripcion__icontains=query))
