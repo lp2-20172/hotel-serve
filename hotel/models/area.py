@@ -4,7 +4,7 @@ from django.db import models
 class Area(models.Model):
 
     area = models.CharField(max_length=15)
-    detalleArea = models.TextField(null=True, blank=True)
+    detalle_area = models.TextField(null=True, blank=True)
 
     class Meta:
         verbose_name = "Area"

@@ -7,9 +7,9 @@ class Trabajador(models.Model):
 
     cargo = models.CharField(max_length=15)
     estado = models.BooleanField(default=False)
-    fechaInicio = models.DateTimeField(blank=True, null=True)
-    fechaFin = models.DateTimeField(blank=True, null=True)
-    informacionAdicional = models.TextField(null=True, blank=True)
+    fecha_inicio = models.DateTimeField(blank=True, null=True)
+    fecha_fin = models.DateTimeField(blank=True, null=True)
+    informacion_adicional = models.TextField(null=True, blank=True)
     area = models.ForeignKey(Area)
     person = models.OneToOneField(Person)
 

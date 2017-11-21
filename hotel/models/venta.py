@@ -11,7 +11,7 @@ class Venta(models.Model):
     estado = models.BooleanField(default=False)
     igv = models.CharField(max_length=5)
     serie = models.CharField(max_length=15)
-    numeroReservacion = models.IntegerField()
+    numero_reservacion = models.IntegerField()
     vendedor = models.ForeignKey(User)
     fecha = models.DateTimeField(auto_now_add=True, null=True)
     cliente = models.ForeignKey(Cliente, blank=True, null=True)

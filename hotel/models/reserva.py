@@ -4,12 +4,12 @@ from .pago import Forma_de_pago
 
 class Reserva(models.Model):
 
-    costoAlojamiento = models.FloatField(default=0.0)
+    costo_alojamiento = models.FloatField(default=0.0)
     estado = models.BooleanField(default=False)
-    tipoReserva = models.CharField(max_length=15)
-    fechaIngresa = models.DateTimeField(blank=True, null=True)
-    fechaReserva = models.DateTimeField(blank=True, null=True)
-    fechaSalida = models.DateTimeField(blank=True, null=True)
+    tipo_reserva = models.CharField(max_length=15)
+    fecha_ingresa = models.DateTimeField(blank=True, null=True)
+    fecha_reserva = models.DateTimeField(blank=True, null=True)
+    fecha_salida = models.DateTimeField(blank=True, null=True)
     forma_de_pago = models.ForeignKey(Forma_de_pago)
 
     class Meta:

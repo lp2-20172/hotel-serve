@@ -7,9 +7,9 @@ class DetalleVenta(models.Model):
     producto = models.CharField(max_length=15)
     cantidad = models.IntegerField(default=0)
     importe = models.FloatField(default=0.0)
-    servicioOfrecido = models.CharField(max_length=15)
-    precioUnitario = models.FloatField(default=0.0)
-    precioTotal = models.FloatField(default=0.0)
+    servicio_ofrecido = models.CharField(max_length=15)
+    precio_unitario = models.FloatField(default=0.0)
+    precio_total = models.FloatField(default=0.0)
     venta = models.ForeignKey(Venta)
 
     class Meta:
