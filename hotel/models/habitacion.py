@@ -17,4 +17,4 @@ class Habitacion(models.Model):
         verbose_name_plural = "Habitaciones"
 
     def __str__(self):
-        return '%s' % (self.tipoHabitacion)
+        return '%s' % (self.tipo_habitacion)
