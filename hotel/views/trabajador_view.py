@@ -5,7 +5,7 @@ from rest_framework import serializers, viewsets
 class TrabajadorSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Area
+        model = Trabajador
         fields = '__all__'
         # fields = ('id', 'username', 'email', 'is_staff')
 
