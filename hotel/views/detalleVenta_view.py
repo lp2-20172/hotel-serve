@@ -7,19 +7,11 @@ from rest_framework import serializers, viewsets
 
 
 class Detalle_VentaSerializer(serializers.ModelSerializer):
-    venta_numDoc = serializers.SerializerMethodField()
-    venta_direccion = serializers.SerializerMethodField()
 
     class Meta:
         model = Detalle_Venta
         fields = '__all__'
         # fields = ('id', 'username', 'email', 'is_staff')
-
-    def get_venta_numDoc(self, obj):
-        return "%s " % (obj.Venta.numDoc)
-
-    def get_venta_direccion(self, obj):
-        return "%s " % (obj.Venta.direccion)
 
 
 class Detalle_VentaViewSet(viewsets.ModelViewSet):
