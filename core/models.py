@@ -7,11 +7,10 @@ from django.contrib.auth.models import AbstractUser
 class Person(models.Model):
 
     nombre = models.CharField(max_length=60)
-    apellidoPaterno = models.CharField(max_length=60)
-    apellidoMaterno = models.CharField(max_length=60)
+    apellido_paterno = models.CharField(max_length=60)
+    apellido_materno = models.CharField(max_length=60)
     direccion = models.CharField(max_length=60)
     edad = models.CharField(max_length=60)
-    razonSocial = models.CharField(max_length=60, blank=True, null=True)
     dni = models.CharField(max_length=8)
     email = models.EmailField(max_length=60, blank=True, null=True)
 
