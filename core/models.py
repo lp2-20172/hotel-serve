@@ -22,7 +22,7 @@ class Person(models.Model):
         verbose_name_plural = "Persons"
 
     def __str__(self):
-        return '%s %s' % (self.nombre, self.apellidoPaterno, )
+        return '%s %s' % (self.nombre, self.apellido_paterno, )
 
 
 class User(AbstractUser):
