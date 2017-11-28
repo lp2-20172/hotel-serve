@@ -1,5 +1,5 @@
 from django.db import models
-from .cliente import Cliente
+from core.models import Person
 
 
 class Reserva(models.Model):
@@ -10,7 +10,7 @@ class Reserva(models.Model):
     fecha_ingresa = models.DateTimeField(blank=True, null=True)
     fecha_reserva = models.DateTimeField(auto_now_add=True, null=True)
     fecha_salida = models.DateTimeField(blank=True, null=True)
-    cliente = models.ForeignKey(Cliente)
+    person = models.ForeignKey(Person)
 
     class Meta:
         verbose_name = "Reservacion"
