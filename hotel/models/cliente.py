@@ -15,8 +15,8 @@ class Cliente(models.Model):
     updated_at = models.DateTimeField(auto_now=True, null=True)
 
     class Meta:
-        verbose_name = "Person"
-        verbose_name_plural = "Persons"
+        verbose_name = "Cliente"
+        verbose_name_plural = "Clientes"
 
     def __str__(self):
         return '%s %s' % (self.nombre, self.apellido_paterno, )
