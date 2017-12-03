@@ -8,8 +8,8 @@ class Tipo_Habitacion(models.Model):
     descripcion = models.TextField(null=True, blank=True)
 
     class Meta:
-        verbose_name = "Habitacion"
-        verbose_name_plural = "Habitaciones"
+        verbose_name = "Tipo_Habitacion"
+        verbose_name_plural = "Tipo_Habitaciones"
 
     def __str__(self):
         return '%s' % (self.nombre)
