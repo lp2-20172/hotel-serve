@@ -6,12 +6,8 @@ from django.contrib.auth.models import AbstractUser
 
 class Person(models.Model):
 
-    nombre = models.CharField(max_length=60)
-    apellido_paterno = models.CharField(max_length=60)
-    apellido_materno = models.CharField(max_length=60)
-    direccion = models.CharField(max_length=60)
-    edad = models.CharField(max_length=60)
-    dni = models.CharField(max_length=8)
+    first_name = models.CharField(max_length=60, blank=True, null=True)
+    last_name = models.CharField(max_length=60, blank=True, null=True)
     email = models.EmailField(max_length=60, blank=True, null=True)
 
     created_at = models.DateTimeField(auto_now_add=True, null=True)
@@ -22,7 +18,7 @@ class Person(models.Model):
         verbose_name_plural = "Persons"
 
     def __str__(self):
-        return '%s %s' % (self.nombre, self.apellido_paterno, )
+        return '%s %s' % (self.first_name, self.last_name, )
 
 
 class User(AbstractUser):

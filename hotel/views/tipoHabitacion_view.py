@@ -1,4 +1,4 @@
-from ..models.habitacion import Habitacion
+from ..models.tipoHabitacion import Tipo_Habitacion
 from rest_framework import serializers, viewsets
 from rest_framework import permissions
 
@@ -6,12 +6,12 @@ from rest_framework import permissions
 class HabitacionSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Habitacion
+        model = Tipo_Habitacion
         fields = '__all__'
         # fields = ('id', 'username', 'email', 'is_staff')
 
 
 class HabitacionViewSet(viewsets.ModelViewSet):
-    queryset = Habitacion.objects.all()
-    serializer_class = HabitacionSerializer
+    queryset = Tipo_Habitacion.objects.all()
+    serializer_class = Tipo_HabitacionSerializer
     #permission_classes = [permissions.IsAuthenticated]
