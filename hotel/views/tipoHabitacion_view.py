@@ -3,7 +3,7 @@ from rest_framework import serializers, viewsets
 from rest_framework import permissions
 
 
-class HabitacionSerializer(serializers.ModelSerializer):
+class Tipo_HabitacionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tipo_Habitacion
@@ -11,7 +11,7 @@ class HabitacionSerializer(serializers.ModelSerializer):
         # fields = ('id', 'username', 'email', 'is_staff')
 
 
-class HabitacionViewSet(viewsets.ModelViewSet):
+class Tipo_HabitacionViewSet(viewsets.ModelViewSet):
     queryset = Tipo_Habitacion.objects.all()
     serializer_class = Tipo_HabitacionSerializer
     #permission_classes = [permissions.IsAuthenticated]
