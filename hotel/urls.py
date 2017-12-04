@@ -10,17 +10,19 @@ from .views.pago_view import Forma_de_pagoViewSet
 from .views.reserva_view import ReservaViewSet
 from .views.trabajador_view import TrabajadorViewSet
 from .views.venta_view import VentaViewSet
+from .views.tipoHabitacion_view import Tipo_HabitacionViewSet
 
 router = routers.DefaultRouter()
 router.register(r'habitaciones', HabitacionViewSet)
-router.register(r'cliente', ClienteViewSet)
-router.register(r'detalleVenta', Detalle_VentaViewSet)
-router.register(r'area', AreaViewSet)
-router.register(r'docType', Doc_TypeViewSet)
-router.register(r'pago', Forma_de_pagoViewSet)
-router.register(r'reserva', ReservaViewSet)
-router.register(r'trabajador', TrabajadorViewSet)
-router.register(r'venta', VentaViewSet)
+router.register(r'clientes', ClienteViewSet)
+router.register(r'detalleVentas', Detalle_VentaViewSet)
+router.register(r'areas', AreaViewSet)
+router.register(r'docTypes', Doc_TypeViewSet)
+router.register(r'pagos', Forma_de_pagoViewSet)
+router.register(r'reservas', ReservaViewSet)
+router.register(r'trabajadores', TrabajadorViewSet)
+router.register(r'ventas', VentaViewSet)
+router.register(r'tipoHabitaciones', VentaViewSet)
 
 
 urlpatterns = [
