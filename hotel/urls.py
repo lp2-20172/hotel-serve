@@ -22,7 +22,7 @@ router.register(r'pagos', Forma_de_pagoViewSet)
 router.register(r'reservas', ReservaViewSet)
 router.register(r'trabajadores', TrabajadorViewSet)
 router.register(r'ventas', VentaViewSet)
-router.register(r'tipoHabitaciones', VentaViewSet)
+router.register(r'tipoHabitaciones', Tipo_HabitacionViewSet)
 
 
 urlpatterns = [
